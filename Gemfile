@@ -15,6 +15,8 @@ gem 'figaro'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
+  gem 'capybara'
+  gem 'launchy'
   gem 'byebug'
   gem 'faraday'
   gem 'factory_girl_rails', '~> 4.0'

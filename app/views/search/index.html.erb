@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Fuel Types</th>
+    <th>Distances</th>
+    <th>Access Times</th>
+  </tr>
+<% @stations.each do |station| %>
+  <tr>
+    <td><%= station.name %></td>
+    <td><%= station.address %></td>
+    <td><%= station.fuel_types %></td>
+    <td><%= station.access_times %></td>
+  </tr>
+<% end %>
+</table>
