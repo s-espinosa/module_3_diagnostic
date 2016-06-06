@@ -5,9 +5,10 @@ RSpec.describe "When a user searches by zip with a distance" do
     VCR.use_cassette("search_with_limited_distance") do
       visit '/'
       fill_in "q", with: "80203"
-      fill_in "distance", with: "5"
+      fill_in "distance", with: "5.0"
       click_on("Locate")
 
+      save_and_open_page
       expect(page).to have_content("Name")
       expect(page).to have_content("Address")
       expect(page).to have_content("Fuel Types")

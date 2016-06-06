@@ -18,5 +18,5 @@
 </table>
 
 <% @pages.times do |current| %>
-  <%= link_to current, params: {q: @zip, distance: @distance, page: current } %>
+  <%= link_to (current+1).to_s, params: {q: @zip, distance: @distance, page: current+1 } %>
 <% end %>
